@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %} 
+{% for photo in photos %}
+<h1>{{ photo.title }}</h1>
+<img src="{{ photo.image.url}}" alt="" width="400">
+
+<p>{{ photo.author }}</p>
+<p>{{ photo.text }}</p>
+<p>{{ photo.created_date }}</p>
+<p>{{ photo.published_date }}</p>
+{% endfor %}
+{%endblock%}
