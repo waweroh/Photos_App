@@ -8,3 +8,7 @@ def photos_list(request):
     context = {'photos': photos}
     return render (request, "photos.html", context)
 
+def index (request,pk):
+    photo = Photos.objects.get(id=pk)
+    return render (request, "index.html",{'photo':photo})
+
