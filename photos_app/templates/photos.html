@@ -7,13 +7,15 @@
     <div class="row">
         {% for photo in photos %}
         <div class="col-md-4">
-            <div class="card my-2 ">
+            <div class="card my-2  h-screen">
                 <img class="card-img-top" src="{{ photo.image.url}}" alt="Card image cap" style="height: 200; object-fit: cover;">
                 <div class="card-body ">
                     <h5 class="card-title">{{ photo.title }}</h5>
                     <!-- <p class="card-text">{{ photo.text }}</p> -->
                     <p class="card-text">{{ photo.created_date }}</p>
-                    <a href="{% url 'index' photo.id %}" class="btn btn-primary">Go somewhere</a>
+                    <a href="{% url 'index' photo.id %}" class="btn btn-primary">Description
+                        
+                    </a>
                 </div>
 
             </div>
